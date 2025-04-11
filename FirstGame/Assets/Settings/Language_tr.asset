@@ -1,0 +1,71 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e9620f8c34305754d8cc9a7e49e852d9, type: 3}
+  m_Name: Language_tr
+  m_EditorClassIdentifier: 
+  m_LocaleId:
+    m_Code: tr
+  m_SharedData: {fileID: 11400000, guid: cfc51f8edab49ca4a856bf7ad6174b5e, type: 2}
+  m_Metadata:
+    m_Items: []
+  m_TableData:
+  - m_Id: 36545527808
+    m_Localized: Baslat
+    m_Metadata:
+      m_Items: []
+  - m_Id: 38927892480
+    m_Localized: Ayarlar
+    m_Metadata:
+      m_Items: []
+  - m_Id: 40903409664
+    m_Localized: Yuksek Puan
+    m_Metadata:
+      m_Items: []
+  - m_Id: 42954424320
+    m_Localized: Cikis
+    m_Metadata:
+      m_Items: []
+  - m_Id: 433318297600
+    m_Localized: Muzik
+    m_Metadata:
+      m_Items: []
+  - m_Id: 541132881920
+    m_Localized: Sesler
+    m_Metadata:
+      m_Items: []
+  - m_Id: 634204487680
+    m_Localized: Dil
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25275790819328
+    m_Localized: Devam Et
+    m_Metadata:
+      m_Items: []
+  - m_Id: 38715804647424
+    m_Localized: Tekrar
+    m_Metadata:
+      m_Items: []
+  - m_Id: 38805478866944
+    m_Localized: Ana Menu
+    m_Metadata:
+      m_Items: []
+  - m_Id: 38883354509312
+    m_Localized: Oyun Bitti
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2741484515246080
+    m_Localized: 'Skor:'
+    m_Metadata:
+      m_Items: []
+  references:
+    version: 2
+    RefIds: []

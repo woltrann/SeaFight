@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: ef3eef1329900b242b41afa14c5ceaf1
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 61834
+  packageName: Medieval cannon
+  packageVersion: 1.0
+  assetPath: Assets/Medieval cannon/cannon prefab.prefab
+  uploadId: 115414
