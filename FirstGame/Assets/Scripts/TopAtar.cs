@@ -6,16 +6,14 @@ public class TopAtar : MonoBehaviour
     public GameObject topPrefab; // At�lacak topun prefabi
     public Transform atisNoktasi; // Topun ��kaca�� nokta
     public float atisHizi = 20f; // Topun f�rlatma h�z�
-    public float atisSikligi = 2f; // Ka� saniyede bir top atacak
 
     public ParticleSystem Buff;
     public Animator CannonAnimator;
 
     void Start()
     {
-        CannonAnimator = GameObject.Find("Canon").GetComponent<Animator>();
+        //CannonAnimator = GameObject.Find("Canon").GetComponent<Animator>();
     }
-    //public void TopFirlatma() => InvokeRepeating("TopFirlat", 1f, atisSikligi);
     public void TopFirlat()
     {
         if (MainControl.ballSayisi >= 1)
@@ -27,10 +25,8 @@ public class TopAtar : MonoBehaviour
             Buff.Play();
             CannonAnimator.SetTrigger("CannonFire");
             Rigidbody rb = yeniTop.GetComponent<Rigidbody>();   // Rigidbody ekleyerek ileri doğru hareket ettir
-            if (rb != null)
-            {
-                rb.linearVelocity = -atisNoktasi.right * atisHizi;
-            }
+            if (rb != null)   rb.linearVelocity = -atisNoktasi.right * atisHizi;
+            
             Destroy(yeniTop, 2f);
         }  
     }

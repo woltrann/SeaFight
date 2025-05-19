@@ -17,6 +17,7 @@ public class MainControl : MonoBehaviour
     public GameObject buttonsPanel;
     private Vector3 defaultScale = new Vector3(1f, 1f, 1f);
     private Vector3 highlightedScale = new Vector3(1.4f, 1.4f, 4f); // Buton büyüklüðü
+    public GameObject ship;
 
     public int stokCam, stokTahta, stokTuga, stokTas, stokDemir, stokCelik;
     public int Cam;
@@ -68,7 +69,7 @@ public class MainControl : MonoBehaviour
     public static float y = 1f; 
 
     void Start()
-    {
+    {           
         spawn = GameObject.Find("Cannon").GetComponent<Character>();
         topAtar = GameObject.Find("TopAtar").GetComponent<TopAtar>();
         Time.timeScale = 1f;
@@ -87,6 +88,7 @@ public class MainControl : MonoBehaviour
         sfxSlider.onValueChanged.AddListener(SetSFXVolume);
         turkishButton.onClick.AddListener(() => SetLanguage("tr"));
         englishButton.onClick.AddListener(() => SetLanguage("en"));
+       
     }
     public void ShowPanel(int index)
     {
@@ -96,7 +98,8 @@ public class MainControl : MonoBehaviour
             panels[i].SetActive(i == index); // Sadece seçilen panel aktif, diðerleri kapalý
             if (isActive) panelButtons[i].transform.localScale = highlightedScale; // Butonu büyüt
             else panelButtons[i].transform.localScale = defaultScale; // Eski haline getir
-     
+            if(index==1) ship.SetActive(true);
+            else ship.SetActive(false);
         }
     }
     void StartCameraAnimation()
@@ -171,7 +174,7 @@ public class MainControl : MonoBehaviour
     public void SettingsPanelClose() => settingsPanel.SetActive(false);
     public void HighScorePanelOpen() => highScorePanel.SetActive(true);
     public void HighScorePanelClose() => highScorePanel.SetActive(false);
-    public void GameOverPanelOpen() { YikilanDuvarText.text = "Yýkýlan Duvar Sayýsý: " + Walls.DuvarSayisi; gameOverPanel.SetActive(true); }
+    public void GameOverPanelOpen() { YikilanDuvarText.text = "Elde Edilen Ganimet; "; gameOverPanel.SetActive(true); }
     public void SetBackgroundVolume(float volume) => audioMixer.SetFloat("BackgroundVolume", Mathf.Log10(volume) * 20);
     public void SetSFXVolume(float volume) => audioMixer.SetFloat("SFXVolume", Mathf.Log10(volume) * 20);
     public void SetLanguage(string localeCode) => LocalizationSettings.SelectedLocale = LocalizationSettings.AvailableLocales.GetLocale(localeCode);
